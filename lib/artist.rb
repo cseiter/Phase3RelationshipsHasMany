@@ -13,4 +13,8 @@ def self.song_count
     Song.all.count
 end
 
+def songs
+    Song.all.select {|indsong| indsong.artist == self}
+end
+
 end
